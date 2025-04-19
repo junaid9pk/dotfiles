@@ -1,0 +1,48 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-size: 14px;
+  padding: 0 10px;
+  margin: 0 5px;
+  min-height: 30px;
+  color: #ffffff;
+  background: transparent;
+}
+
+window#waybar {
+  background: rgba(0, 0, 0, 0.6);
+  border-bottom: 2px solid #444;
+}
+
+#clock,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#battery,
+#custom-*, 
+#tray {
+  background: rgba(50, 50, 50, 0.3);
+  border-radius: 8px;
+  padding: 4px 12px;
+  margin: 2px 4px;
+}
+
+#workspaces button {
+  padding: 4px 10px;
+  border-radius: 6px;
+  background-color: rgba(100, 100, 100, 0.3);
+  color: #bbbbbb;
+  margin: 2px;
+  transition: background 0.2s, color 0.2s;
+}
+
+#workspaces button.active {
+  background-color: #5e81ac; /* Example: Nord blue */
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#workspaces button.urgent {
+  background-color: #bf616a; /* Example: Nord red */
+  color: #ffffff;
+}

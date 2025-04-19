@@ -1,0 +1,48 @@
+Every 1.0s: sudo lspci -vv -s 01:00.0 | grep -i 'memory.*prefetchable'        archlinux: 04:13:19 AM
+                                                                                       in 0.043s (0)
+        Region 0: Memory at f6000000 (32-bit, non-prefetchable) [size=16M]                          
+        Region 1: Memory at e0000000 (64-bit, prefetchable) [size=256M]                             
+        Region 3: Memory at f0000000 (64-bit, prefetchable) [size=32M]                              
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
