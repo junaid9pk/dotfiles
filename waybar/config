@@ -4,27 +4,19 @@
 
 	"modules-left": [
 		"hyprland/workspaces",
-		"custom/arrow10",
+		"custom/arrow1",
 		"hyprland/window"
 	],
 
 	"modules-right": [
-        "pulseaudio",
-        "custom/arrow7",
         "network",
-        "custom/arrow6",
         "memory",
-        "custom/arrow5",
         "custom/gpu",
-        "custom/arrow5",
         "cpu",
-        "custom/arrow4",
         "temperature",
-        "custom/arrow3",
+        "pulseaudio",
         "clock#date",
-        "custom/arrow2",
         "clock#time",
-        "custom/arrow1",
 	],
 
 	// Modules
@@ -92,14 +84,14 @@
 		"tooltip": false
 	},
 
-	"network": {
-		"interval": 5,
-		"format-wifi": " {essid} ({signalStrength}%)",
-		"format-ethernet": " {ipaddr}/{cidr}",
-		"format-disconnected": "No connection",
-		"format-alt": " {ifname}",
-		"tooltip": false
-	},
+    "network": {
+        "interval": 1,
+        "format-wifi": " {essid} ({signalStrength}%)  {bandwidthDownBits:2}  {bandwidthUpBits:2}",
+        "format-ethernet": "  {bandwidthDownBits:2}  {bandwidthUpBits:2}",
+        "format-disconnected": " Disconnected",
+        "tooltip": true,
+        "tooltip-format": " {ipaddr}: {ifname}",
+    },
 
 	"pulseaudio": {
 		"format": "{icon} {volume}%",
@@ -134,47 +126,7 @@
 	},
 
 	"custom/arrow1": {
-		"format": "",
-		"tooltip": false
-	},
-
-	"custom/arrow2": {
-		"format": "",
-		"tooltip": false
-	},
-
-	"custom/arrow3": {
-		"format": "",
-		"tooltip": false
-	},
-
-	"custom/arrow4": {
-		"format": "",
-		"tooltip": false
-	},
-
-	"custom/arrow5": {
-		"format": "",
-		"tooltip": false
-	},
-
-	"custom/arrow6": {
-		"format": "",
-		"tooltip": false
-	},
-
-	"custom/arrow7": {
-		"format": "",
-		"tooltip": false
-	},
-
-	"custom/arrow8": {
-		"format": "",
-		"tooltip": false
-	},
-
-	"custom/arrow10": {
 		"format": "",
 		"tooltip": false
-	}
+	},
 }
