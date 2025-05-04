@@ -19,6 +19,7 @@ window#waybar {
 #network,
 #pulseaudio,
 #battery,
+#bluetooth,
 #custom-*, 
 #tray {
   background: rgba(50, 50, 50, 0.3);

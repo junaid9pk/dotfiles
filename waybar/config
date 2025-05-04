@@ -14,6 +14,7 @@
         "custom/gpu",
         "cpu",
         "temperature",
+        "bluetooth",
         "pulseaudio",
         "clock#date",
         "clock#time",
@@ -93,23 +94,38 @@
         "tooltip-format": " {ipaddr}: {ifname}",
     },
 
-	"pulseaudio": {
-		"format": "{icon} {volume}%",
-		"format-bluetooth": "{icon} {volume}%",
-		"format-muted": "",
-		"format-icons": {
-			"headphone": "",
-			"hands-free": "",
-			"headset": "",
-			"phone": "",
-			"portable": "",
-			"car": "",
-			"default": ["", ""]
-		},
-		"scroll-step": 1,
-		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-		"tooltip": false
-	},
+    "bluetooth": {
+        "format": " {status}",
+        "format-disabled": " Off",
+        "format-connected": " {device_alias}",
+        "format-connected-battery": " {device_alias} {device_battery}%",
+        "tooltip": true,
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "on-click": "~/.config/waybar/scripts/bluetooth-toggle.sh",
+        "on-click-right": "blueman-manager",
+        "interval": 10
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+        "tooltip": true
+    },
 
 	"temperature": {
 		"critical-threshold": 90,
