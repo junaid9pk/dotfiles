@@ -15,12 +15,14 @@ window#waybar {
 
 #clock,
 #cpu,
+#temperature,
 #memory,
 #network,
 #pulseaudio,
 #battery,
 #bluetooth,
-#custom-*, 
+#custom-gpu,
+#custom-window_type,
 #tray {
   background: rgba(50, 50, 50, 0.3);
   border-radius: 8px;
@@ -29,7 +31,7 @@ window#waybar {
 }
 
 #workspaces button {
-  padding: 4px 10px;
+  padding: 4px;
   border-radius: 6px;
   background-color: rgba(100, 100, 100, 0.3);
   color: #bbbbbb;
@@ -38,12 +40,12 @@ window#waybar {
 }
 
 #workspaces button.active {
-  background-color: #5e81ac; /* Example: Nord blue */
+  background-color: #5e81ac;
   color: #ffffff;
   font-weight: bold;
 }
 
 #workspaces button.urgent {
-  background-color: #bf616a; /* Example: Nord red */
+  background-color: #bf616a;
   color: #ffffff;
 }

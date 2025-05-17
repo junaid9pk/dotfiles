@@ -1,14 +1,14 @@
 {
-	"layer": "top",
-	"position": "top",
+    "layer": "top",
+    "position": "top",
 
-	"modules-left": [
-		"hyprland/workspaces",
-		"custom/arrow1",
-		"hyprland/window"
-	],
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/window_type",
+        "hyprland/window",
+    ],
 
-	"modules-right": [
+    "modules-right": [
         "network",
         "memory",
         "custom/gpu",
@@ -18,55 +18,54 @@
         "pulseaudio",
         "clock#date",
         "clock#time",
-	],
+    ],
 
-	// Modules
+    "custom/window_type": {
+        "exec": "~/.config/waybar/scripts/window_type.sh",
+        "interval": 1,
+        "return-type": "text",
+        "tooltip": false,
+        "format": "{}"
+    },
 
-	"battery": {
-		"interval": 10,
-		"states": {
-			"warning": 30,
-			"critical": 15
-		},
-		"format-time": "{H}:{M:02}",
-		"format": "{icon} {capacity}% ({time})",
-		"format-charging": " {capacity}% ({time})",
-		"format-charging-full": " {capacity}%",
-		"format-full": "{icon} {capacity}%",
-		"format-alt": "{icon} {power}W",
-		"format-icons": [
-			"",
-			"",
-			"",
-			"",
-			""
-		],
-		"tooltip": false
-	},
+    "battery": {
+        "interval": 10,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format-time": "{H}:{M:02}",
+        "format": "{icon} {capacity}% ({time})",
+        "format-charging": " {capacity}% ({time})",
+        "format-charging-full": " {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-alt": "{icon} {power}W",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": false
+    },
 
-	"clock#time": {
-		"interval": 10,
-		"format": "{:%I:%M %p}",
-		"tooltip": false
-	},
+    "clock#time": {
+        "interval": 10,
+        "format": "{:%I:%M %p}",
+        "tooltip": false
+    },
 
-	"clock#date": {
-		"interval": 20,
-		"format": "{:%e %b %Y}",
-		"tooltip": false
-		//"tooltip-format": "{:%e %B %Y}"
-	},
+    "clock#date": {
+        "interval": 20,
+        "format": "{:%e %b %Y}",
+        "tooltip": false
+    },
 
-	"cpu": {
-		"interval": 5,
-		"tooltip": false,
-		"format": " {usage}%",
-		"format-alt": " {load}",
-		"states": {
-			"warning": 70,
-			"critical": 90
-		}
-	},
+    "cpu": {
+        "interval": 5,
+        "tooltip": false,
+        "format": " {usage}%",
+        "format-alt": " {load}",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
 
     "custom/gpu": {
         "interval": 2,
@@ -75,15 +74,15 @@
         "tooltip": false
     },
 
-	"memory": {
-		"interval": 5,
-		"format": " {used:0.1f}G/{total:0.1f}G",
-		"states": {
-			"warning": 70,
-			"critical": 90
-		},
-		"tooltip": false
-	},
+    "memory": {
+        "interval": 5,
+        "format": "  {used:0.1f}G/{total:0.1f}G",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        },
+        "tooltip": false
+    },
 
     "network": {
         "interval": 1,
@@ -91,7 +90,7 @@
         "format-ethernet": "  {bandwidthDownBits:2}  {bandwidthUpBits:2}",
         "format-disconnected": " Disconnected",
         "tooltip": true,
-        "tooltip-format": " {ipaddr}: {ifname}",
+        "tooltip-format": " {ipaddr}: {ifname}"
     },
 
     "bluetooth": {
@@ -127,22 +126,11 @@
         "tooltip": true
     },
 
-	"temperature": {
-		"critical-threshold": 90,
-		"interval": 5,
-		"format": "{icon} {temperatureC}°",
-		"format-icons": [
-			"",
-			"",
-			"",
-			"",
-			""
-		],
-		"tooltip": false
-	},
-
-	"custom/arrow1": {
-		"format": "",
-		"tooltip": false
-	},
+    "temperature": {
+        "critical-threshold": 90,
+        "interval": 5,
+        "format": "{icon} {temperatureC}°",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": false
+    }
 }
