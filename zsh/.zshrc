@@ -102,3 +102,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 MODE_INDICATOR="%B%F{cyan}<%b%f"
+
+export EDITOR=nvim
