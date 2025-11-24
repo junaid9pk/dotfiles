@@ -7,9 +7,9 @@ floating=$(echo "$active" | jq -r '.floating // empty')
 pseudo=$(echo "$active" | jq -r '.pseudo // empty')
 
 if [[ "$workspace_name" == "special:magic" ]]; then
-  echo "󱡄"
+    echo "󱡄"
 elif [[ "$floating" == "true" ]]; then
-  echo "󰊠"
+    echo "󰊠"
 else
-  echo ""
+    echo ""
 fi
