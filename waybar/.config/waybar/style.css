@@ -13,6 +13,18 @@ window#waybar {
     border-bottom: 2px solid #444;
 }
 
+tooltip {
+    background: rgba(30, 30, 30, 0.95);
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 6px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+tooltip label {
+    color: #ffffff;
+}
+
 #clock,
 #cpu,
 #temperature,
@@ -20,14 +32,37 @@ window#waybar {
 #network,
 #pulseaudio,
 #battery,
+#backlight,
+#idle_inhibitor,
+#power-profiles-daemon,
 #bluetooth,
 #custom-gpu,
 #custom-window_type,
+#custom-power,
 #tray {
     background: rgba(50, 50, 50, 0.3);
     border-radius: 8px;
     padding: 4px 12px;
     margin: 2px 4px;
+}
+
+#tray > .item {
+    background: transparent;
+    padding: 0 6px;
+    margin: 0 2px;
+}
+
+#tray menu {
+    background: rgba(30, 30, 30, 0.95);
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 6px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#tray menuitem {
+    background: transparent;
+    color: #ffffff;
 }
 
 #workspaces button {
