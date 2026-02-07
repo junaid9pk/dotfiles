@@ -4,26 +4,17 @@
 
         "modules-left": [
             "hyprland/workspaces",
-        "custom/window_type",
-        "hyprland/window"
+            "custom/window_type",
+            "hyprland/window"
         ],
 
         "modules-right": [
-            "network",
-        "memory",
-        "custom/gpu",
-        "cpu",
-        "temperature",
-        "backlight",
-        "battery",
-        "power-profiles-daemon",
-        "idle_inhibitor",
-        "bluetooth",
-        "pulseaudio",
-        "tray",
-        "custom/power",
-        "clock#date",
-        "clock#time"
+            "group/system",
+            "battery",
+            "tray",
+            "custom/power",
+            "clock#date",
+            "clock#time"
         ],
 
         "custom/window_type": {
@@ -49,6 +40,34 @@
             "format-icons": ["", "", "", "", ""],
             "tooltip": true,
             "tooltip-format": "Battery: {capacity}% ({time})"
+        },
+        
+        "group/system": {
+            "orientation": "inherit",
+            "drawer": {
+                "transition-duration": 300,
+                "children-class": "sys-hidden",
+                "click-to-reveal": true,
+                "transition-left-to-right": false
+            },
+            "modules": [
+                "custom/system",
+                "custom/gpu",
+                "network",
+                "memory",
+                "cpu",
+                "temperature",
+                "backlight",
+                "power-profiles-daemon",
+                "idle_inhibitor",
+                "bluetooth",
+                "pulseaudio"
+            ]
+        },
+
+        "custom/system": {
+            "format": "◀",
+            "tooltip": false
         },
 
         "backlight": {
